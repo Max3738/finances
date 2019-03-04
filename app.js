@@ -17,12 +17,14 @@ let index_2=0;
 
 
 //show date at the page;
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
 let d = new Date();
-let curr_month = d.getMonth() + 1;
 let curr_date = d.getDate();
 let curr_year = d.getFullYear();
 let budget__title = document.querySelector(".budget__title--month");
-budget__title.textContent =`${curr_date +"."+ curr_month +"."+ curr_year +" year"}`;
+budget__title.textContent =`${curr_date +" "+ monthNames[d.getMonth()] +"."+ curr_year +" year"}`;
 
 
 
@@ -182,7 +184,7 @@ const idSeacherOfIncome = () => {
                             <div class="item__description">${text}</div>
                             <div class="right clearfix">
                                 <div class="item__value" id = "right">${number}</div>
-                                <div class="item__percentage">20%</div>
+                                <div class="item__percentage">  </div>
                                 <div class="item__delete">
                                     <button class="item__delete--btn"><i class="ion-ios-close-outline delete-task"></i></button>
                                 </div>
@@ -235,7 +237,7 @@ function addTaskToIncome(text, number, id) {
                             <div class="item__description">${text}</div>
                             <div class="right clearfix">
                                 <div class="item__value" id = "left">${number}</div>
-                                <div class="item__percentage">20%</div>
+                                <div class="item__percentage">   </div>
                                 <div class="item__delete">
                                     <button class="item__delete--btn"><i class="ion-ios-close-outline delete-task"></i></button>
                                 </div>
